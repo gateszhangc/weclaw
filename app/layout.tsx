@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Azeret_Mono, Public_Sans, Syne } from "next/font/google";
+import Script from "next/script";
 
 import { JsonLd } from "@/components/json-ld";
 import { SiteAnalytics } from "@/components/site-analytics";
@@ -97,6 +98,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-background text-foreground">
         <JsonLd data={websiteJsonLd} />
+        <Script id="runtime-public-env" src="/runtime-public-env" strategy="beforeInteractive" />
         <SiteAnalytics />
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
