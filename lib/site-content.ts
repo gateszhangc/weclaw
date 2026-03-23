@@ -9,6 +9,7 @@ export const siteConfig = {
   name: publicEnv.projectName,
   url: publicEnv.siteUrl,
   repoUrl: "https://github.com/fastclaw-ai/weclaw",
+  deployUrl: "https://www.easyclaw.pro/en",
   description:
     "Turn WeChat into an operator channel for Claude, Codex, Gemini, Kimi, Cursor, OpenCode, and OpenClaw with a QR-login bridge built for real agent workflows.",
   installCommand: "curl -sSL https://raw.githubusercontent.com/fastclaw-ai/weclaw/main/install.sh | sh",

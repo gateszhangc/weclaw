@@ -5,11 +5,11 @@ test("home page renders core marketing flow and metadata", async ({ page }) => {
 
   const homePrimaryCta = page
     .getByRole("main")
-    .getByRole("link", { name: "Open Quick Start", exact: true })
+    .getByRole("link", { name: "One-Click Deploy", exact: true })
     .first();
   const headerPrimaryCta = page
     .getByRole("banner")
-    .getByRole("link", { name: "Quick Start", exact: true })
+    .getByRole("link", { name: "One-Click Deploy", exact: true })
     .first();
 
   await expect(page).toHaveTitle(/WeClaw \| WeChat AI Agent Bridge for Claude, Codex, Gemini, and More/);
@@ -20,9 +20,9 @@ test("home page renders core marketing flow and metadata", async ({ page }) => {
     }),
   ).toBeVisible();
   await expect(homePrimaryCta).toBeVisible();
-  await expect(homePrimaryCta).toHaveAttribute("href", "/quick-start");
+  await expect(homePrimaryCta).toHaveAttribute("href", "https://www.easyclaw.pro/en");
   await expect(headerPrimaryCta).toBeVisible();
-  await expect(headerPrimaryCta).toHaveAttribute("href", "/quick-start");
+  await expect(headerPrimaryCta).toHaveAttribute("href", "https://www.easyclaw.pro/en");
   await expect(page.getByRole("main").getByRole("link", { name: /Open GitHub/i })).toHaveCount(2);
   await expect(page.getByRole("main").getByRole("link", { name: /Open GitHub/i }).first()).toBeVisible();
   await expect(page.getByText(/Keep the agent stack you already trust/i)).toBeVisible();
@@ -83,11 +83,11 @@ test("faq page renders FAQ structured data and navigation on mobile", async ({ p
   if (isMobile) {
     const mobileQuickStart = page
       .getByRole("banner")
-      .getByRole("link", { name: "Quick Start", exact: true })
+      .getByRole("link", { name: "One-Click Deploy", exact: true })
       .first();
 
     await expect(mobileQuickStart).toBeVisible();
-    await expect(mobileQuickStart).toHaveAttribute("href", "/quick-start");
+    await expect(mobileQuickStart).toHaveAttribute("href", "https://www.easyclaw.pro/en");
   }
 });
 

@@ -28,10 +28,10 @@ export function SiteHeader() {
             </div>
           </Link>
           <Link
-            href="/quick-start"
+            href={siteConfig.deployUrl}
             className={cn(buttonVariants({ size: "sm" }), "rounded-full lg:hidden")}
           >
-            Quick Start
+            One-Click Deploy
           </Link>
         </div>
 
@@ -71,8 +71,8 @@ export function SiteHeader() {
               GitHub
               <ArrowUpRight className="size-4" />
             </Link>
-            <Link href="/quick-start" className={cn(buttonVariants({ size: "sm" }), "rounded-full px-4")}>
-              Quick Start
+            <Link href={siteConfig.deployUrl} className={cn(buttonVariants({ size: "sm" }), "rounded-full px-4")}>
+              One-Click Deploy
             </Link>
           </div>
         </div>

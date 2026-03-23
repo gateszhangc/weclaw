@@ -94,13 +94,13 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/quick-start"
+                href={siteConfig.deployUrl}
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "rounded-full px-5 text-sm font-semibold shadow-[0_18px_40px_rgb(131_233_197_/0.22)]",
                 )}
               >
-                Open Quick Start
+                One-Click Deploy
                 <ArrowRight className="size-4" />
               </Link>
               <Link
